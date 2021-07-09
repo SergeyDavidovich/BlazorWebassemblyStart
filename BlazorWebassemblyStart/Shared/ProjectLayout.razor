@@ -1,0 +1,50 @@
+﻿@inherits LayoutComponentBase
+
+<div id="root" class="container-fluid">
+
+    <div id="header" class="row fixed-top">
+        <div class="col align-content-center">
+            <p>Page header</p>
+        </div>
+    </div>
+
+    <div id="content" class="row">
+        <div class="col">
+            @Body
+        </div>
+    </div>
+
+    <div id="footer" class="row fixed-bottom">
+        <div class="col">
+            <p>Page header</p>
+        </div>
+    </div>
+
+</div>
+
+<style>
+    body {
+    }
+
+    #root {
+        height: 100vh;
+    }
+
+    #header {
+        background-color: crimson;
+        color: white;
+        height: 3em;
+    }
+
+    #content {
+        background-color: white;
+        height: stretch;
+        padding-top: 3em;
+    }
+
+    #footer {
+        background-color: crimson;
+        color: white;
+        height: 3em;
+    }
+</style>
