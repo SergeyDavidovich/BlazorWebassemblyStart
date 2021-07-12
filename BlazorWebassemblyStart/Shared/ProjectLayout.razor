@@ -17,8 +17,8 @@
     
     <!-- sidebar element declaration -->
     <div style="position:fixed; top:50px; height:100vh">
-        <SfSidebar ID="side" HtmlAttributes="@HtmlAttribute" @bind-IsOpen="@SidebarOpen" Target=".main-content" Width="220px" @ref="Sidebar"
-                   CloseOnDocumentClick="true" Animate="true" EnableGestures="true" ShowBackdrop="true" Type="SidebarType.Push">
+        <SfSidebar ID="side" HtmlAttributes="@HtmlAttribute" @bind-IsOpen="@SidebarOpen" Target=".main-content" Width="220px" @ref="Sidebar" 
+                   CloseOnDocumentClick="true" Animate="true" EnableGestures="true" ShowBackdrop="false" Type="SidebarType.Push">
             <ChildContent>
                 <ul class="nav flex-column">
                     <li class="nav-item px-3">
@@ -123,6 +123,10 @@
         font-size: 13px;
         font-weight: 400;
         margin-top: 20px;
+    }
+
+    .nav-link{
+        font-size:14px;
     }
 
     .e-sidebar.e-visibility{
