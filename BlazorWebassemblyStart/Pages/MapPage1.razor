@@ -4,7 +4,7 @@
 <div class="control-section">
     <SfMaps>
         <MapsTitleSettings Text="Headquarters of the United Nations" />
-        <MapsCenterPosition Latitude="40.7209" Longitude="-73.9680" />
+        <MapsCenterPosition Latitude="@CurLatitude" Longitude="@CurLongitude" />
         <MapsZoomSettings Enable="false" ZoomFactor="10" />
         <MapsLayers>
             <MapsLayer LayerType="ShapeLayerType.OSM" TValue="string">
@@ -45,6 +45,10 @@
     }
 </style>
 @code {
+
+    double CurLatitude = 40.7209;
+    double CurLongitude = -73.9680;
+
     public class MarkerData
     {
         public string Name { get; set; }
