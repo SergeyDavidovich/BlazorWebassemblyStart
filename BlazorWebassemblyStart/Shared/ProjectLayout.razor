@@ -3,171 +3,171 @@
 @using Syncfusion.Blazor.Navigations
 
 @*<div id="wrapper" class="container-fluid" style="width:100%">*@
-<div class="col-lg-12 col-sm-12 col-md-12">
+    <div class="col-lg-12 col-sm-12 col-md-12">
 
-    <!--header declaration-->
-    <div id="header">
-        <ul class="header-list">
-            <li id="hamburger" style="font-weight:600; top:12px;font-size:larger; cursor:pointer" class="oi oi-menu" @onclick="@Toggle"></li>
-            <li class="right-header list support">Support</li>
-            <li class="right-header list tour">Tour</li>
-        </ul>
-    </div>
-    <!--end of header declaration-->
-    <!-- sidebar element declaration -->
-    <div style="position:fixed; top:50px; height:100vh">
-        <SfSidebar ID="side" HtmlAttributes="@HtmlAttribute" @bind-IsOpen="@SidebarOpen" Target=".main-content" Width="220px" @ref="Sidebar"
-                   CloseOnDocumentClick="true" Animate="true" EnableGestures="true" ShowBackdrop="false" Type="SidebarType.Push">
-            <ChildContent>
-                <ul class="nav flex-column" style="margin-top:20px;">
-                    <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                            <span class="oi oi-home" aria-hidden="true"></span> Home
-                        </NavLink>
-                    </li>
-                    <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="counter">
-                            <span class="oi oi-plus" aria-hidden="true"></span> Counter
-                        </NavLink>
-                    </li>
-                    <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="fetchdata">
-                            <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
-                        </NavLink>
-                    </li>
-                    <li class="nav-item px-3">
-                        <NavLink class="nav-link" href="mappage1">
-                            <span class="oi oi-map" aria-hidden="true"></span> Map page 1
-                        </NavLink>
-                    </li>
-                </ul>
-            </ChildContent>
-        </SfSidebar>
-    </div>
-    <!-- end of sidebar element -->
-    <!-- main content declaration -->
-    <div class="main-content" id="maintext">
-        <div class="content">
-            @Body
+        <!--header declaration-->
+        <div id="header">
+            <ul class="header-list">
+                <li id="hamburger" style="font-weight:600; top:12px;font-size:larger; cursor:pointer" class="oi oi-menu" @onclick="@Toggle"></li>
+                <li class="right-header list support">Support</li>
+                <li class="right-header list tour">Tour</li>
+            </ul>
         </div>
-    </div>
-    <!--end of main content declaration -->
-    <!--footer declaration-->
-    <div id="footer" class="row fixed-bottom">
-        <div class="col">
-            <p>FOOTER</p>
+        <!--end of header declaration-->
+        <!-- sidebar element declaration -->
+        <div style="position:fixed; top:50px; height:100vh">
+            <SfSidebar ID="side" HtmlAttributes="@HtmlAttribute" @bind-IsOpen="@SidebarOpen" Target=".main-content" Width="220px" @ref="Sidebar"
+                       CloseOnDocumentClick="true" Animate="true" EnableGestures="true" ShowBackdrop="false" Type="SidebarType.Over">
+                <ChildContent>
+                    <ul class="nav flex-column" style="margin-top:20px;">
+                        <li class="nav-item px-3">
+                            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                                <span class="oi oi-home" aria-hidden="true"></span> Home
+                            </NavLink>
+                        </li>
+                        <li class="nav-item px-3">
+                            <NavLink class="nav-link" href="counter">
+                                <span class="oi oi-plus" aria-hidden="true"></span> Counter
+                            </NavLink>
+                        </li>
+                        <li class="nav-item px-3">
+                            <NavLink class="nav-link" href="fetchdata">
+                                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+                            </NavLink>
+                        </li>
+                        <li class="nav-item px-3">
+                            <NavLink class="nav-link" href="mappage1">
+                                <span class="oi oi-map" aria-hidden="true"></span> Map page 1
+                            </NavLink>
+                        </li>
+                    </ul>
+                </ChildContent>
+            </SfSidebar>
         </div>
+        <!-- end of sidebar element -->
+        <!-- main content declaration -->
+        <div class="main-content" id="maintext">
+            <div class="content">
+                @Body
+            </div>
+        </div>
+        <!--end of main content declaration -->
+        <!--footer declaration-->
+        <div id="footer" class="row fixed-bottom">
+            <div class="col">
+                <p>FOOTER</p>
+            </div>
+        </div>
+        <!--end of footer declaration-->
     </div>
-    <!--end of footer declaration-->
-</div>
 @*</div>*@
 
 <style>
 
-    /* Common styles for header, footer */
-    #header, #footer {
-        background-color: #653839;
-        color: white;
-        height: 50px;
-    }
-    /*Styles for header*/
-    #hamburger {
-        float: left;
-    }
+        /* Common styles for header, footer */
+        #header, #footer {
+            background-color: #653839;
+            color: white;
+            height: 50px;
+        }
+        /*Styles for header*/
+        #hamburger {
+            float: left;
+        }
 
-    #header .right-header {
-        height: 35px;
-        padding: 7px;
-        float: right;
-    }
+        #header .right-header {
+            height: 35px;
+            padding: 7px;
+            float: right;
+        }
 
-    #header .list {
-        list-style: none;
-        cursor: pointer;
-        font-size: 16px;
-        line-height: 35px;
-    }
+        #header .list {
+            list-style: none;
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 35px;
+        }
 
-    #header .header-list {
-        padding-left: 15px;
-        margin: 0;
-    }
-    /* end of  styles for header*/
+        #header .header-list {
+            padding-left: 15px;
+            margin: 0;
+        }
+        /* end of  styles for header*/
 
-    /* content area styles */
-    #maintext.main-content {
-        height: 100vh;
-        z-index: 1000;
-        margin:16px;
-    }
+        /* content area styles */
+        #maintext.main-content {
+            height: 100vh;
+            z-index: 1000;
+            margin: 16px;
+        }
 
-    a, a:active, a:hover {
-        color: white
-    }
+        a, a:active, a:hover {
+            color: white
+        }
 
-    .e-sidebar {
-        background: #422829;
-    }
+        .e-sidebar {
+            background: #422829;
+        }
 
-    .header-section {
-        background: deepskyblue;
-    }
-    /* end of content area styles */
+        .header-section {
+            background: deepskyblue;
+        }
+        /* end of content area styles */
 
-    /* menu styles */
-    .sidebar-menu .action-btn {
-        background-color: #1784c7;
-    }
-    /*end of button styles */
-    /* custom code start */
-    .center {
-        text-align: center;
-        display: none;
-        font-size: 13px;
-        font-weight: 400;
-        margin-top: 20px;
-    }
+        /* menu styles */
+        .sidebar-menu .action-btn {
+            background-color: #1784c7;
+        }
+        /*end of button styles */
+        /* custom code start */
+        .center {
+            text-align: center;
+            display: none;
+            font-size: 13px;
+            font-weight: 400;
+            margin-top: 20px;
+        }
 
-    .nav-link {
-        font-size: 1.3em;
-    }
+        .nav-link {
+            font-size: 1.3em;
+        }
 
-    .e-sidebar.e-visibility {
-        top: 50px;
-    }
+        .e-sidebar.e-visibility {
+            top: 50px;
+        }
 
-    .col-md-12, body {
-        padding: 0;
-    }
+        .col-md-12, body {
+            padding: 0;
+        }
 
-    .sidebar-menu {
-        margin-left: -1px;
-        position: fixed;
-        top: 50px;
-    }
-    /*body styles */
-    body {
-        overflow-y: hidden;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        -webkit-tap-highlight-color: transparent;
-    }
-    /*end of body styles */
- 
-    /* custom code end */
- 
-   /* #header .icon-menu:before {
-        content: '\e812';
-    }
+        .sidebar-menu {
+            margin-left: -1px;
+            position: fixed;
+            top: 50px;
+        }
+        /*body styles */
+        body {
+            overflow-y: hidden;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        /*end of body styles */
 
-    .sidebar-menu .icon,
-    #header #hamburger.icon-menu {
-        font-family: 'icon';
-    }
+        /* custom code end */
 
-    .sidebar-menu .e-menu-icon::before {
-        color: #656a70;
-    }
-*/
+        /* #header .icon-menu:before {
+            content: '\e812';
+        }
+
+        .sidebar-menu .icon,
+        #header #hamburger.icon-menu {
+            font-family: 'icon';
+        }
+
+        .sidebar-menu .e-menu-icon::before {
+            color: #656a70;
+        }
+    */
 </style>
 
 @*<style>
@@ -195,14 +195,18 @@
     SfSidebar Sidebar;
     public Orientation Orientation = Orientation.Horizontal;
     public Orientation VerOrientation = Orientation.Vertical;
-    public bool SidebarOpen { get; set; } = true;
+    public bool SidebarOpen { get; set; }
     private bool isSidebarOpen;
 
-    Dictionary<string, object>
-    HtmlAttribute = new Dictionary<string, object>()
-        {
+    Dictionary<string, object> HtmlAttribute = new Dictionary<string, object>()
+    {
             {"class", "sidebar-menu" }
-                    };
+        };
+
+    protected override void OnInitialized()
+    {
+        SidebarOpen = false;
+    }
 
     public void Toggle()
     {
