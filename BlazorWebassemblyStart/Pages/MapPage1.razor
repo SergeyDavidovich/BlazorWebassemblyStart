@@ -1,7 +1,7 @@
 ﻿@page "/mappage1"
 @using Syncfusion.Blazor.Maps
 <h3>MapPage1</h3>
-<div class="container-fluid shadow-sm" style="padding: 20px; background-color: #b56c00 " >
+<div class="container-fluid shadow-sm" style="padding: 20px; border: 2px solid #b56c00" >
     <SfMaps Height="70vh">
         <MapsTitleSettings Text="Headquarters of the United Nations" />
         <MapsCenterPosition Latitude="@CurLatitude" Longitude="@CurLongitude" />
@@ -9,17 +9,10 @@
         <MapsLayers>
             <MapsLayer LayerType="ShapeLayerType.OSM" TValue="string">
                 <MapsMarkerSettings>
-                    <MapsMarker Visible="true" DataSource="@MarkerDatas" TValue="MarkerData">
+                    <MapsMarker Visible="true" DataSource="@MarkerDatas" TValue="MarkerData" Shape="MarkerType.Balloon" Height="40" Width="40" Fill="crimson">
                         <ChildContent>
                             <MapsMarkerTooltipSettings Visible="true" ValuePath="Name" />
                         </ChildContent>
-                        <MarkerTemplate>
-                            {
-                                <div style="pointer-events: none;">
-                                    <img class="markerTemplate" src="images/maps/ballon.png" />
-                                </div>
-                            }
-                        </MarkerTemplate>
                     </MapsMarker>
                 </MapsMarkerSettings>
             </MapsLayer>
