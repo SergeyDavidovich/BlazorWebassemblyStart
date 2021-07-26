@@ -3,8 +3,8 @@
   "short_name": "BlazorWebassemblyStart",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#03173d",
+  "background_color": "#ff0000",
+  "theme_color": "#00ff00",
   "icons": [
     {
       "src": "icon-512.png",
