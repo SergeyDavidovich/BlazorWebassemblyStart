@@ -1,7 +1,7 @@
 ﻿@page "/mappage1"
 @using Syncfusion.Blazor.Maps
 <h3>MapPage1</h3>
-<div class="container-fluid shadow-sm navbar-brand" style="padding: 20px; border: 2px solid #b56c00;" >
+<div class="container-fluid shadow-sm navbar-brand" style="padding: 20px; border: 2px solid #b56c00;">
     <SfMaps Height="70vh">
         <MapsTitleSettings Text="Headquarters of the United Nations" />
         <MapsCenterPosition Latitude="@CurLatitude" Longitude="@CurLongitude" />
@@ -9,7 +9,7 @@
         <MapsLayers>
             <MapsLayer LayerType="ShapeLayerType.OSM" TValue="string">
                 <MapsMarkerSettings>
-                    <MapsMarker Visible="true" DataSource="@MarkerDatas" TValue="MarkerData" Shape="MarkerType.Balloon" Height="40" Width="40" Fill="crimson">
+                    <MapsMarker Visible="true" DataSource="@markers" TValue="MarkerData" Shape="MarkerType.Balloon" Height="40" Width="40" Fill="crimson">
                         <ChildContent>
                             <MapsMarkerTooltipSettings Visible="true" ValuePath="Name" />
                         </ChildContent>
@@ -31,13 +31,15 @@
 </style>
 @code {
 
-    double CurLatitude;
-    double CurLongitude;
+    double CurLatitude = 40.7209;
+    double CurLongitude = -73.9680;
+
+    List<MarkerData> markers = new List<MarkerData>();
 
     protected override void OnInitialized()
     {
-        CurLatitude = 40.7209;
-        CurLongitude = -73.9680;
+        var marker = new MarkerData() { Name = "Manhattan, New York, USA", Latitude = 40.7488758, Longitude = -73.9730091 };
+        markers.Add(marker);
     }
 
 
@@ -47,7 +49,4 @@
         public double Latitude { get; set; }
         public double Longitude { get; set; }
     }
-    public List<MarkerData> MarkerDatas = new List<MarkerData> {
-        new MarkerData { Name="Manhattan, New York, USA",  Latitude=40.7488758, Longitude=-73.9730091 }
-    };
 }
