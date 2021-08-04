@@ -7,11 +7,40 @@
     <article id="mainArticle">
             @Body
     </article>
-    <nav id="mainNav">Nav</nav>
+    <nav id="mainNav">
+            <SfSidebar ID="side" HtmlAttributes="@HtmlAttribute" @bind-IsOpen="@SidebarOpen" Target=".main-content" Width="20%" @ref="Sidebar"
+                       CloseOnDocumentClick="true" Animate="true" EnableGestures="true" ShowBackdrop="false" Type="SidebarType.Over">
+                <ChildContent>
+                    <ul class="nav flex-column" style="margin-top:20px;">
+                        <li class="nav-item px-3">
+                            <NavLink class="nav-link" href="" Match="NavLinkMatch.All" @onclick="@Toggle">
+                                <span class="oi oi-home" aria-hidden="true"></span> Home
+                            </NavLink>
+                        </li>
+                        <li class="nav-item px-3">
+                            <NavLink class="nav-link" href="counter" @onclick="@Toggle">
+                                <span class="oi oi-plus" aria-hidden="true"></span> Counter
+                            </NavLink>
+                        </li>
+                        <li class="nav-item px-3">
+                            <NavLink class="nav-link" href="fetchdata" @onclick="@Toggle">
+                                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+                            </NavLink>
+                        </li>
+                        <li class="nav-item px-3">
+                            <NavLink class="nav-link" href="mappage1" @onclick="@Toggle">
+                                <span class="oi oi-map" aria-hidden="true"></span> Map page 1
+                            </NavLink>
+                        </li>
+                    </ul>
+                </ChildContent>
+            </SfSidebar>
+    </nav>
     <div id="siteAds">Ads</div>
     <footer id="pageFooter">Footer</footer>
 </div>
 <style>
+    /*Grid*/
     .wrapper {
         display: grid;
         grid-template-areas:
@@ -23,45 +52,43 @@
         grid-gap: 6px;
         height: 100vh;
     }
-
     .wrapper>header {
         border:1px solid darkgray;
     }
-
-        .wrapper > footer {
+    .wrapper > footer {
             border: 1px solid darkgray;
         }
-
-        .wrapper > article {
+    .wrapper > article {
             border: 1px solid darkgray;
         }
-
-        .wrapper > nav {
+    .wrapper > nav {
             border: 1px solid darkgray;
         }
-
-        .wrapper > div {
+    .wrapper > div {
             border: 1px solid darkgray;
         }
-
     #pageHeader {
         grid-area: header;
     }
-
     #pageFooter {
         grid-area: footer;
     }
-
     #mainArticle {
         grid-area: article;
     }
-
     #siteAds {
         grid-area: ads;
     }
-
     #mainNav {
         grid-area: nav;
+    }
+    /*end Grid*/
+
+    /*Sidebar*/
+    .e-sidebar {
+        background-color: steelblue;
+    }
+     a{color:white; font-size:1.2em}
     }
 </style>
 
@@ -80,7 +107,7 @@
 
     protected override void OnInitialized()
     {
-        SidebarOpen = false;
+        SidebarOpen = true;
     }
 
     public void Toggle()
