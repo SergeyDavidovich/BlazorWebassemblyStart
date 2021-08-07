@@ -9,7 +9,7 @@
         <MapsLayers>
             <MapsLayer LayerType="ShapeLayerType.OSM" TValue="string">
                 <MapsMarkerSettings>
-                    <MapsMarker Visible="true" DataSource="@markers" TValue="MarkerData" Shape="MarkerType.Star" Height="40" Width="40" Fill="crimson">
+                    <MapsMarker Visible="true" DataSource="@markers" TValue="MarkerData" Shape="MarkerType.Balloon" Height="40" Width="40" Fill="crimson">
                         <ChildContent>
                             <MapsMarkerTooltipSettings Visible="true" ValuePath="Name" />
                         </ChildContent>
@@ -34,12 +34,15 @@
     double CurLatitude = 40.7209;
     double CurLongitude = -73.9680;
 
-    List<MarkerData> markers = new List<MarkerData>();
+    List<MarkerData> markers;
 
     protected override void OnInitialized()
     {
-        var marker = new MarkerData() { Name = "Manhattan, New York, USA", Latitude = 40.7488758, Longitude = -73.9730091 };
-        markers.Add(marker);
+        markers = new List<MarkerData>()
+            {
+                new MarkerData(){Name = "A1", Latitude = 40, Longitude = -73},
+                new MarkerData(){Name = "A2", Latitude = 49, Longitude = -71}
+            };
     }
 
 

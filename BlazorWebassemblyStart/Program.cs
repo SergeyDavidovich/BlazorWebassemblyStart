@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
+
 
 namespace BlazorWebassemblyStart
 {
@@ -27,5 +29,6 @@ namespace BlazorWebassemblyStart
 
             await builder.Build().RunAsync();
         }
+             
     }
 }
