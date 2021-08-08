@@ -1,4 +1,4 @@
 # BlazorWebassemblyStart
 ****
 
-<sergeydavidovich.github.io/BlazorWebassemblyStart>
+sergeydavidovich.github.io/BlazorWebassemblyStart
