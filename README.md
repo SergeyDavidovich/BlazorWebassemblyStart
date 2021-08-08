@@ -1,2 +1,2 @@
 # BlazorWebassemblyStart
-https://sergeydavidovich.github.io/BlazorWebassemblyStart/
+<a href="https://sergeydavidovich.github.io/BlazorWebassemblyStart" target="_blank"/>
