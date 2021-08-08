@@ -1,3 +1,3 @@
 # BlazorWebassemblyStart
---
-[Live view]<"https://sergeydavidovich.github.io/BlazorWebassemblyStart">
+----
+[Live view]"https://sergeydavidovich.github.io/BlazorWebassemblyStart"
