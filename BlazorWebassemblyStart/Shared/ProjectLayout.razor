@@ -58,7 +58,7 @@
 
 <style>
 
-        /* Common styles for header, footer */
+        /* Common styles for header */
     #header {
         background-color: #653839;
         color: white;
@@ -106,6 +106,9 @@
         a, a:active {
             color: #ffffff
         }
+        a:active{
+            color:gold;
+        }
         a:hover{
             color:orangered;
         }
@@ -151,33 +154,11 @@
             position: fixed;
             top: 50px;
         }
-        /*body styles */
-        body {
-            /*overflow-y: hidden;*/
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            -webkit-tap-highlight-color: transparent;
-        }
-        /*end of body styles */
-
-        /* custom code end */
-
-        /* #header .icon-menu:before {
-            content: '\e812';
-        }
-
-        .sidebar-menu .icon,
-        #header #hamburger.icon-menu {
-            font-family: 'icon';
-        }
-
-        .sidebar-menu .e-menu-icon::before {
-            color: #656a70;
-        }
-    */
 </style>
 
 @code
 {
+    #region
     SfSidebar Sidebar;
     public Orientation Orientation = Orientation.Horizontal;
     public Orientation VerOrientation = Orientation.Vertical;
@@ -206,4 +187,5 @@
         }
         SidebarOpen = isSidebarOpen;
     }
+    #endregion
 }
