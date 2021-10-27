@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Themes.ThemeProvider">
+    <Position X="8" Y="1" Width="3" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ThemeProvider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Themes.MaterialPalette" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="1" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AQAAIAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAA=</HashCode>
+      <FileName>MaterialPalette.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Themes.TailwindPalette">
+    <Position X="0.5" Y="3.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AQAAIAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAA=</HashCode>
+      <FileName>MaterialPalette.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Themes.IPalette">
+    <Position X="4.25" Y="1" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAgAAAAAA=</HashCode>
+      <FileName>MaterialPalette.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
