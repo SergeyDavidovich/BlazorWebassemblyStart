@@ -1,5 +1,5 @@
 {
-  "name": "BlazorWebassemblyStart",
+  "name": "Blazor PWA Start",
   "short_name": "BlazorWebassemblyStart",
   "start_url": "./",
   "display": "standalone",
