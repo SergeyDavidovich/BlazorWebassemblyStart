@@ -10,7 +10,7 @@
             <li class="right-header list tour">Tour</li>
         </ul>
     </div>
-    <div id="Sidebar" style="position:fixed; top:50px; height:100vh">
+    <div id="sidebar">
         <SfSidebar ID="side" HtmlAttributes="@HtmlAttribute" @bind-IsOpen="@SidebarOpen" Target=".main-content" Width="220px" @ref="Sidebar"
                    CloseOnDocumentClick="true" Animate="true" EnableGestures="true" ShowBackdrop="false" Type="SidebarType.Over">
             <ChildContent>
@@ -90,6 +90,13 @@
         margin-right: auto;
         margin-top: 50px;
         overflow: inherit;
+    }
+
+    #sidebar {
+        position: fixed;
+        top: 50px;
+        height: 100vh;
+        z-index: 1000;
     }
 
     @@media(min-width:800px) {
