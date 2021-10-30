@@ -1,7 +1,6 @@
 ﻿@inherits LayoutComponentBase
 @using Syncfusion.Blazor.Navigations
 
-<Animate Animation="Animations.FadeIn" DurationMs="1000">
     <div>
         <div id="header">
             <ul class="header-list">
@@ -47,13 +46,19 @@
             </SfSidebar>
         </div>
         <div id="maintext">
+<Animate Animation="Animations.FadeIn" DurationMs="1000" class="animator">
             <div class="content">
                 @Body
             </div>
+</Animate>
         </div>
     </div>
-</Animate>
     <style>
+        .animator{
+            position:fixed;
+            top:0;
+            padding-top: 3em;
+        }
         /* Common styles for header */
         #header {
             background-color: #653839;
@@ -63,7 +68,9 @@
             top: 0;
             width: 100%;
             z-index: 10;
+            margin-bottom:60px;
         }
+       
         /*Styles for header*/
         #hamburger {
             float: left;
