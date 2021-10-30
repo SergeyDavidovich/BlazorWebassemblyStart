@@ -7,6 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
+      "BlazorAnimate.dll": "sha256-udePU3dIbDiwMFaRy21mVsMNqp8JTQpNxUfirOPnsag=",
       "Microsoft.AspNetCore.Components.dll": "sha256-hjPmxkftffZrjsSV22vVGp8Wur+KRLM2Fel72sXvObc=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-q1ERhFDvEw8WB6bcUnNusrgW0VLJCPNMgpLxbLIyQKA=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-hJFyydJWPLWfdHeguREx8\/4nQ95I4KEMz8bS+72vcb4=",
@@ -18,7 +19,7 @@
       "Microsoft.Extensions.DependencyInjection.Abstractions.dll": "sha256-5\/0pOQGeHP4KNIgSz8fqyFHwvR+YfOOr2nWzwJQ++aE=",
       "Microsoft.Extensions.Logging.dll": "sha256-TpIA498zSsaZAjS+42XzHSmeWdSuY4\/\/ydfZQGlz1O8=",
       "Microsoft.Extensions.Logging.Abstractions.dll": "sha256-OsmdQoFiNmpqW0WHVklQ4R5\/fLVeqFPmPBRQzZxxufQ=",
-      "Microsoft.Extensions.Options.dll": "sha256-c40jGzk6WhcRh7Ay6HH4B25Apva3p6O++FKNWsG91OY=",
+      "Microsoft.Extensions.Options.dll": "sha256-nhdYvwPT12RJVKu4mEbeFuxbkTziIjLeN2D1nuSujCE=",
       "Microsoft.Extensions.Primitives.dll": "sha256-hct+p9L33jifSMRIcnABF\/pDPQK4jIyYHXILYE4468o=",
       "Microsoft.JSInterop.dll": "sha256-zP6zXDfpzJjo1zomVRqtKqHlFFHaMMnNeFco0C83a58=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-421zIgHVXw1yI4x0B5ZA\/fW+I63Upuw5ZddGvWp4FSw=",
@@ -37,7 +38,7 @@
       "Syncfusion.Licensing.dll": "sha256-+ZEBD2UIE+SSzWQw4jLukdYW\/aIA4p26TQuu+TbLpW4=",
       "Syncfusion.PdfExport.Net.dll": "sha256-xWwcLajexcjmV71zcmdMLHYgRJu5qBnfjLPjgVaYcV0=",
       "System.IO.Pipelines.dll": "sha256-o\/PdJLBGKSgIYSBLq6l+GUStgsQ7K0l+eLIHhkVU1o0=",
-      "BlazorWebassemblyStart.dll": "sha256-xjAze8PoKQkYoJQoJjbVPMpQjkQjCkNbVfIUEbPnbAA=",
+      "BlazorWebassemblyStart.dll": "sha256-ZhV8Vlp15feVwLLTPTR2jfLQjLsJ6w1gOI4DnpjZbb0=",
       "Microsoft.CSharp.dll": "sha256-5gzSnvaftB5odQ8eGIgtIa\/HpDJQrGv1PXVafM3yKHs=",
       "System.Collections.Concurrent.dll": "sha256-Ne9XO3oXrNpgXqs1SKe0AE+GjIT2tFsN7w\/SzHitzL0=",
       "System.Collections.Immutable.dll": "sha256-tUDLtEhCrqji4V9JNoky9PEQdPWwqYBJ0TSKJ9wftjk=",
