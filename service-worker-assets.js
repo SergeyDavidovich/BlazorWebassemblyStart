@@ -57,7 +57,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-HWasL6\/MtWmV2K46ywXjoDJR9+PvcQr\/Z2fKtvok4tE=",
+      "hash": "sha256-bpePhhgGnVVpYVZqqRER9Ey4\/Ssqk4rRlEcn7\/vPfxs=",
       "url": "index.html"
     },
     {
@@ -71,10 +71,6 @@
     {
       "hash": "sha256-4Yh4OTT5TEAPNyXEzOG+n5l2HPK294WFItz4SIelj88=",
       "url": "sample-data\/weather.json"
-    },
-    {
-      "hash": "sha256-LXKMDJ5zG0gKSr\/W3sUQAtzIFdVuHnh9mz9Tcm1VQR0=",
-      "url": "spinner.gif"
     },
     {
       "hash": "sha256-5ttRwTa4Rar530elwLdfGDeH9I9NX9MPyDl6zLi9uug=",
@@ -469,7 +465,7 @@
       "url": "_framework\/System.IO.Pipelines.dll"
     },
     {
-      "hash": "sha256-WZBWXTeCpXBMe9ZJyOXL0FaVN5EqIwmoTQf4X2lDO7A=",
+      "hash": "sha256-xSMErRGpVv+wbVqsa7XTqX5qdh6VZJ2CDgxXjOec734=",
       "url": "_framework\/BlazorWebassemblyStart.dll"
     },
     {
@@ -641,7 +637,7 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-lg1hsdxE\/R\/3qGuxart\/A9g3sMkWxtIiFM6xyDZwS8Q=",
+      "hash": "sha256-xl1iEmo8DaZcIi2H8\/VGjoxiY2fmNEuxzjfekuOktNk=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -649,5 +645,5 @@
       "url": "_framework\/blazor.webassembly.js"
     }
   ],
-  "version": "viqueEc6"
+  "version": "rSsbP83y"
 };
