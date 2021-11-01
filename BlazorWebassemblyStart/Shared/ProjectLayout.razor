@@ -2,7 +2,7 @@
 @using Syncfusion.Blazor.Navigations
 
 <div id="menu">
-    <Animate Animation="Animations.Fade" DurationMs="300">
+    @*<Animate Animation="Animations.Fade" DurationMs="300">*@
         <div id="header">
             <ul class="header-list">
                 <li id="hamburger" style="font-weight:600; top:12px;font-size:larger; cursor:pointer" class="oi oi-menu" @onclick="@Toggle"></li>
@@ -17,7 +17,7 @@
                 </li>
             </ul>
         </div>
-    </Animate>
+    @*</Animate>*@
 </div>
 
 <div id="sidebar">
@@ -58,7 +58,8 @@
 
 <style>
 
-    a {
+    /* Style for hyperlinks */
+    a, a:active, a:hover,a:visited {
         text-decoration: none;
     }
     /* Common styles for header */
@@ -66,7 +67,7 @@
         background-color: #653839;
         color: white;
         height: 50px;
-        /*position: fixed;*/
+        position: fixed;
         top: 0;
         width: 100%;
         z-index: 1000;
@@ -158,6 +159,8 @@
     .nav-link {
         font-size: 1.2em;
         margin-top: 16px;
+        display: block;
+        padding: .5rem 1rem;
     }
 
     .e-sidebar.e-visibility {
