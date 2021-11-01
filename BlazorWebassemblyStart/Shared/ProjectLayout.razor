@@ -1,202 +1,202 @@
 ﻿@inherits LayoutComponentBase
 @using Syncfusion.Blazor.Navigations
 
-@*<Animate Animation="Animations.FadeIn" DurationMs="1000" style="margin-top:-50px; position:fixed;">*@
-    <div>
-        <div id="header">
-            <ul class="header-list">
-                <li id="hamburger" style="font-weight:600; top:12px;font-size:larger; cursor:pointer" class="oi oi-menu" @onclick="@Toggle"></li>
-                <li class="right-header list tour">
-                    <a href="https://whatpwacando.today/" target="_blank">and more ...</a>
+<Animate Animation="Animations.Fade" DurationMs="300">
+    <div id="header">
+        <ul class="header-list">
+            <li id="hamburger" style="font-weight:600; top:12px;font-size:larger; cursor:pointer" class="oi oi-menu" @onclick="@Toggle"></li>
+            <li class="right-header list tour">
+                <a href="https://whatpwacando.today/" target="_blank">and more ...</a>
+            </li>
+            <li class="right-header list tour">
+                <a href="https://www.europeanbusinessreview.com/how-progressive-web-app-will-gain-more-demands-in-the-future/" target="_blank">and more ...</a>
+            </li>
+            <li class="right-header list support">
+                <a href="https://www.simicart.com/blog/what-is-progressive-web-app/" target="_blank">Read more ...</a>
+            </li>
+        </ul>
+    </div>
+</Animate>
+<div id="sidebar">
+    <SfSidebar ID="side" HtmlAttributes="@HtmlAttribute" @bind-IsOpen="@SidebarOpen" Target=".main-content" Width="220px" @ref="Sidebar"
+               CloseOnDocumentClick="true" Animate="true" EnableGestures="true" ShowBackdrop="false" Type="SidebarType.Over">
+        <ChildContent>
+            <ul class="nav flex-column" style="margin-top:20px;">
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="" Match="NavLinkMatch.All" @onclick="@Toggle">
+                        <span class="oi oi-home" aria-hidden="true"></span> Home
+                    </NavLink>
                 </li>
-                <li class="right-header list tour">
-                    <a href="https://www.europeanbusinessreview.com/how-progressive-web-app-will-gain-more-demands-in-the-future/" target="_blank">and more ...</a>
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="counter" @onclick="@Toggle">
+                        <span class="oi oi-plus" aria-hidden="true"></span> Counter
+                    </NavLink>
                 </li>
-                <li class="right-header list support">
-                    <a href="https://www.simicart.com/blog/what-is-progressive-web-app/" target="_blank">Read more ...</a>
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="fetchdata" @onclick="@Toggle">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+                    </NavLink>
+                </li>
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="mappage" @onclick="@Toggle">
+                        <span class="oi oi-map" aria-hidden="true"></span> Map page
+                    </NavLink>
                 </li>
             </ul>
-        </div>
-        <div id="sidebar">
-            <SfSidebar ID="side" HtmlAttributes="@HtmlAttribute" @bind-IsOpen="@SidebarOpen" Target=".main-content" Width="220px" @ref="Sidebar"
-                       CloseOnDocumentClick="true" Animate="true" EnableGestures="true" ShowBackdrop="false" Type="SidebarType.Over">
-                <ChildContent>
-                    <ul class="nav flex-column" style="margin-top:20px;">
-                        <li class="nav-item px-3">
-                            <NavLink class="nav-link" href="" Match="NavLinkMatch.All" @onclick="@Toggle">
-                                <span class="oi oi-home" aria-hidden="true"></span> Home
-                            </NavLink>
-                        </li>
-                        <li class="nav-item px-3">
-                            <NavLink class="nav-link" href="counter" @onclick="@Toggle">
-                                <span class="oi oi-plus" aria-hidden="true"></span> Counter
-                            </NavLink>
-                        </li>
-                        <li class="nav-item px-3">
-                            <NavLink class="nav-link" href="fetchdata" @onclick="@Toggle">
-                                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
-                            </NavLink>
-                        </li>
-                        <li class="nav-item px-3">
-                            <NavLink class="nav-link" href="mappage" @onclick="@Toggle">
-                                <span class="oi oi-map" aria-hidden="true"></span> Map page
-                            </NavLink>
-                        </li>
-                    </ul>
-                </ChildContent>
-            </SfSidebar>
-        </div>
-        <div id="maintext">
-            <div class="content">
+        </ChildContent>
+    </SfSidebar>
+    <div id="maintext">
+        <div class="content">
+            <Animate Animation="Animations.Fade" DurationMs="900">
                 @Body
-            </div>
+            </Animate>
         </div>
     </div>
-@*</Animate>*@
-    <style>
-        /* Common styles for header */
-        #header {
-            background-color: #653839;
-            color: white;
-            height: 50px;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 10;
-        }
-        /*Styles for header*/
-        #hamburger {
-            float: left;
-        }
+</div>
+<style>
+    /* Common styles for header */
+    #header {
+        background-color: #653839;
+        color: white;
+        height: 50px;
+        /*position: fixed;*/
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    /*Styles for header*/
+    #hamburger {
+        float: left;
+    }
 
-        #header .right-header {
-            height: 35px;
-            padding: 7px;
-            float: right;
-        }
+    #header .right-header {
+        height: 35px;
+        padding: 7px;
+        float: right;
+    }
 
-        #header .list {
-            list-style: none;
-            cursor: pointer;
-            font-size: 16px;
-            line-height: 35px;
-        }
+    #header .list {
+        list-style: none;
+        cursor: pointer;
+        font-size: 16px;
+        line-height: 35px;
+    }
 
-        #header .header-list {
-            padding-left: 15px;
-            margin: 0;
-        }
-        /* end of  styles for header*/
+    #header .header-list {
+        padding-left: 15px;
+        margin: 0;
+    }
+    /* end of  styles for header*/
 
-        /* content area styles */
+    /* content area styles */
+    #maintext {
+        height: 100vh;
+        width: 100%;
+        overflow: scroll;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    #sidebar {
+        position: fixed;
+        top: 50px;
+        height: 100vh;
+        z-index: 1000;
+    }
+
+    @@media(min-width:800px) {
         #maintext {
-            height: 100vh;
-            margin: 16px;
-            width: 90%;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 50px;
-            overflow: inherit;
+            width: 58%;
+        }
+    }
+
+    a, a:active {
+        color: #ffffff
+    }
+
+        a:active {
+            color: gold;
         }
 
-        #sidebar {
-            position: fixed;
-            top: 50px;
-            height: 100vh;
-            z-index: 1000;
+        a:hover {
+            color: orangered;
         }
 
-        @@media(min-width:800px) {
-            #maintext {
-                width: 58%;
-            }
-        }
+    .e-sidebar {
+        background: #422829;
+    }
 
-        a, a:active {
-            color: #ffffff
-        }
+    .header-section {
+        background: deepskyblue;
+    }
+    /* end of content area styles */
 
-            a:active {
-                color: gold;
-            }
+    /* menu styles */
+    .sidebar-menu .action-btn {
+        background-color: #1784c7;
+    }
+    /*end of button styles */
+    /* custom code start */
+    .center {
+        text-align: center;
+        display: none;
+        font-size: 13px;
+        font-weight: 400;
+        margin-top: 20px;
+    }
 
-            a:hover {
-                color: orangered;
-            }
+    .nav-link {
+        font-size: 1.2em;
+        margin-top: 16px;
+    }
 
-        .e-sidebar {
-            background: #422829;
-        }
+    .e-sidebar.e-visibility {
+        top: 50px;
+    }
 
-        .header-section {
-            background: deepskyblue;
-        }
-        /* end of content area styles */
+    .col-md-12, body {
+        padding: 0;
+    }
 
-        /* menu styles */
-        .sidebar-menu .action-btn {
-            background-color: #1784c7;
-        }
-        /*end of button styles */
-        /* custom code start */
-        .center {
-            text-align: center;
-            display: none;
-            font-size: 13px;
-            font-weight: 400;
-            margin-top: 20px;
-        }
+    .sidebar-menu {
+        margin-left: -1px;
+        position: fixed;
+        top: 50px;
+    }
+</style>
 
-        .nav-link {
-            font-size: 1.2em;
-            margin-top: 16px;
-        }
-
-        .e-sidebar.e-visibility {
-            top: 50px;
-        }
-
-        .col-md-12, body {
-            padding: 0;
-        }
-
-        .sidebar-menu {
-            margin-left: -1px;
-            position: fixed;
-            top: 50px;
-        }
-    </style>
-
-    @code
+@code
 {
-        #region
-        SfSidebar Sidebar;
-        public Orientation Orientation = Orientation.Horizontal;
-        public Orientation VerOrientation = Orientation.Vertical;
-        public bool SidebarOpen { get; set; }
-        private bool isSidebarOpen;
+    #region
+    SfSidebar Sidebar;
+    public Orientation Orientation = Orientation.Horizontal;
+    public Orientation VerOrientation = Orientation.Vertical;
+    public bool SidebarOpen { get; set; }
+    private bool isSidebarOpen;
 
-        Dictionary<string, object> HtmlAttribute = new Dictionary<string, object>()
+    Dictionary<string, object> HtmlAttribute = new Dictionary<string, object>()
 {
             {"class", "sidebar-menu" }
         };
 
-        protected override void OnInitialized()
-        {
-            SidebarOpen = false;
-        }
-
-        public void Toggle()
-        {
-            if (SidebarOpen)
-            {
-                isSidebarOpen = false;
-            }
-            else
-            {
-                isSidebarOpen = true;
-            }
-            SidebarOpen = isSidebarOpen;
-        }
-        #endregion
+    protected override void OnInitialized()
+    {
+        SidebarOpen = false;
     }
+
+    public void Toggle()
+    {
+        if (SidebarOpen)
+        {
+            isSidebarOpen = false;
+        }
+        else
+        {
+            isSidebarOpen = true;
+        }
+        SidebarOpen = isSidebarOpen;
+    }
+    #endregion
+}
