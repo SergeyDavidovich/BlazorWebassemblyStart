@@ -10,8 +10,8 @@
         @Body
     </article>
     @*<nav id="mainNav">*@
-    <SfSidebar ID="mainNav" HtmlAttributes="@HtmlAttribute" @bind-IsOpen="@SidebarOpen" Target=".main-content" Width="20%" @ref="Sidebar"
-               CloseOnDocumentClick="true" Animate="true" EnableGestures="true" ShowBackdrop="false" Type="SidebarType.Slide">
+    <SfSidebar ID="mainNav" HtmlAttributes="@SideBarHtmlAttribute" @bind-IsOpen="@SidebarOpen" Target=".main-content" Width="20%" @ref="Sidebar"
+               CloseOnDocumentClick="true" Animate="true" EnableGestures="true" ShowBackdrop="false" Type="SidebarType.Over">
         <ChildContent>
             <ul class="nav flex-column" style="margin-top:20px;">
                 <li class="nav-item px-3">
@@ -108,7 +108,6 @@
         color: white;
         font-size: 1.2em
     }
-    }
 </style>
 
 
@@ -117,9 +116,8 @@
     public Orientation Orientation = Orientation.Horizontal;
     public Orientation VerOrientation = Orientation.Vertical;
     public bool SidebarOpen { get; set; }
-    private bool isSidebarOpen;
 
-    Dictionary<string, object> HtmlAttribute = new Dictionary<string, object>()
+    Dictionary<string, object> SideBarHtmlAttribute = new Dictionary<string, object>()
 {
             {"class", "sidebar-menu" }
         };
@@ -133,12 +131,12 @@
     {
         if (SidebarOpen)
         {
-            isSidebarOpen = false;
+            SidebarOpen = false;
         }
         else
         {
-            isSidebarOpen = true;
+            SidebarOpen = true;
         }
-        SidebarOpen = isSidebarOpen;
+        //SidebarOpen = isSidebarOpen;
     }
 }
