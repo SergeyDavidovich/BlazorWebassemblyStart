@@ -1,8 +1,8 @@
 ﻿@inherits LayoutComponentBase
 @using Syncfusion.Blazor.Navigations
 
-<div id="menu">
     @*<Animate Animation="Animations.Fade" DurationMs="300">*@
+<div id="menu" class="bg-primary">
         <div id="header">
             <ul class="header-list">
                 <li id="hamburger" style="font-weight:600; top:12px;font-size:larger; cursor:pointer" class="oi oi-menu" @onclick="@Toggle"></li>
@@ -17,10 +17,10 @@
                 </li>
             </ul>
         </div>
-    @*</Animate>*@
 </div>
+    @*</Animate>*@
 
-<div id="sidebar">
+<div id="sidebar" class="bg-primary">
     <SfSidebar ID="side" HtmlAttributes="@HtmlAttribute" @bind-IsOpen="@SidebarOpen" Target=".main-content" Width="220px" @ref="Sidebar"
                CloseOnDocumentClick="true" Animate="true" EnableGestures="true" ShowBackdrop="false" Type="SidebarType.Over">
         <ChildContent>
@@ -64,7 +64,7 @@
     }
     /* Common styles for header */
     #header {
-        background-color: #653839;
+        background-color: inherit;
         color: white;
         height: 50px;
         position: fixed;
@@ -135,7 +135,7 @@
         }
 
     .e-sidebar {
-        background: #422829;
+        background: inherit;
     }
 
     .header-section {
