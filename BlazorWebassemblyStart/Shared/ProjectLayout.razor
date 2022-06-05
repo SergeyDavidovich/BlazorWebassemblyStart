@@ -1,29 +1,35 @@
 ﻿@inherits LayoutComponentBase
 @using Syncfusion.Blazor.Navigations
 
-    @*<Animate Animation="Animations.Fade" DurationMs="300">*@
+@*<Animate Animation="Animations.Fade" DurationMs="300">*@
 <div id="menu" class="bg-primary">
-        <div id="header">
-            <ul class="header-list">
-                <li id="hamburger" style="font-weight:600; top:12px;font-size:larger; cursor:pointer" class="oi oi-menu" @onclick="@Toggle"></li>
-                <li class="right-header list tour">
-                    <a href="https://whatpwacando.today/" target="_blank">and more ...</a>
-                </li>
-                <li class="right-header list tour">
-                    <a href="https://www.europeanbusinessreview.com/how-progressive-web-app-will-gain-more-demands-in-the-future/" target="_blank">and more ...</a>
-                </li>
-                <li class="right-header list support">
-                    <a href="https://www.simicart.com/blog/what-is-progressive-web-app/" target="_blank">Read more ...</a>
-                </li>
-            </ul>
-        </div>
+    <div id="header">
+        <ul class="header-list">
+            <li id="hamburger" style="font-weight:600; top:12px;font-size:larger; cursor:pointer" class="oi oi-menu" @onclick="@Toggle"></li>
+            <li class="right-header list tour">
+                <a href="https://whatpwacando.today/" target="_blank">and more ...</a>
+            </li>
+            <li class="right-header list tour">
+                <a href="https://www.europeanbusinessreview.com/how-progressive-web-app-will-gain-more-demands-in-the-future/" target="_blank">and more ...</a>
+            </li>
+            <li class="right-header list support">
+                <a href="https://www.simicart.com/blog/what-is-progressive-web-app/" target="_blank">Read more ...</a>
+            </li>
+        </ul>
+    </div>
 </div>
-    @*</Animate>*@
+@*</Animate>*@
 
 <div id="sidebar" class="bg-primary">
     <SfSidebar ID="side" HtmlAttributes="@HtmlAttribute" @bind-IsOpen="@SidebarOpen" Target=".main-content" Width="220px" @ref="Sidebar"
                CloseOnDocumentClick="true" Animate="true" EnableGestures="true" ShowBackdrop="false" Type="SidebarType.Over">
         <ChildContent>
+            <div class="container p-2 my-0 bg-white text-dark text-center">
+                <h4>Blazor Wasm</h4>
+                <h4>template</h4>
+                <p5>This sample helps Your to start new project</p5>
+            </div>
+
             <ul class="nav flex-column" style="margin-top:20px;">
                 <li class="nav-item px-3">
                     <NavLink class="nav-link" href="" Match="NavLinkMatch.All" @onclick="@Toggle">
@@ -126,7 +132,7 @@
         }
 
         a:hover {
-            color: orangered;
+            color: gold;
         }
 
     .e-sidebar {
