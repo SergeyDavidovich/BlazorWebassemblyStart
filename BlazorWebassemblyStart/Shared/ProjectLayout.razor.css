@@ -1,0 +1,119 @@
+﻿/* Style for hyperlinks */
+a, a:active, a:hover, a:visited {
+    text-decoration: none;
+}
+/* Common styles for header */
+#header {
+    background-color: inherit;
+    color: white;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+/*Styles for header*/
+#hamburger {
+    float: left;
+}
+
+#header .right-header {
+    height: 35px;
+    padding: 7px;
+    float: right;
+}
+
+#header .list {
+    list-style: none;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 35px;
+}
+
+#header .header-list {
+    padding-left: 15px;
+    margin: 0;
+}
+/* end of  styles for header*/
+
+/* content area styles */
+#maintext {
+    height: 100vh;
+    margin-top: 60px;
+}
+
+/*    .content {
+            padding: 20px;
+    */ }
+
+#sidebar {
+    position: fixed;
+    top: 50px;
+    height: 100vh;
+    z-index: 1000;
+}
+
+@@media(min-width:800px) {
+    #maintext {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+a, a:active {
+    color: #ffffff
+}
+
+    a:active {
+        color: gold;
+    }
+
+    a:hover {
+        color: orangered;
+    }
+
+.e-sidebar {
+    background: inherit;
+}
+
+.header-section {
+    background: deepskyblue;
+}
+/* end of content area styles */
+
+/* menu styles */
+.sidebar-menu .action-btn {
+    background-color: #1784c7;
+}
+/*end of button styles */
+/* custom code start */
+.center {
+    text-align: center;
+    display: none;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.nav-link {
+    font-size: 1.2em;
+    margin-top: 16px;
+    display: block;
+    padding: .5rem 1rem;
+}
+
+.e-sidebar.e-visibility {
+    top: 50px;
+}
+
+.col-md-12, body {
+    padding: 0;
+}
+
+.sidebar-menu {
+    margin-left: -1px;
+    position: fixed;
+    top: 50px;
+}
+
