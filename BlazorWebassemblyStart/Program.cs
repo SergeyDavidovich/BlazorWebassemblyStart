@@ -17,7 +17,7 @@ namespace BlazorWebassemblyStart
     {
         public static async Task Main(string[] args)
         {
-            // Register Syncfusion license
+            // Register Syncfusion license ver 19.2.0.47
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NDcwNzIzQDMxMzkyZTMyMmUzMGJYNHlyK2tVQm9VRXlHRDlCaUdIRGxYSzFaZERLNUp1OFF5Y051L3Z2Ync9");
 
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
