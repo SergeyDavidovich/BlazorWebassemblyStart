@@ -1,5 +1,8 @@
 ﻿@page "/mappage"
+
 @using Syncfusion.Blazor.Maps
+@using System.Threading
+
 <h3>MapPage</h3>
 <div class="container-fluid shadow-sm navbar-brand" style="padding: 20px; border: 1px solid #b56c00;">
     <SfMaps Height="70vh">
@@ -34,15 +37,20 @@
     double CurLatitude = 40.7209;
     double CurLongitude = -73.9680;
 
-    List<MarkerData> markers;
+    List<MarkerData> markers = new();
 
     protected override void OnInitialized()
     {
-        markers = new List<MarkerData>()
+#if DEBUG
+    //Thread.Sleep(6000);
+#endif
+        var _markers = new List<MarkerData>()
             {
                 new MarkerData(){Name = "A1", Latitude = 40, Longitude = -73},
                 new MarkerData(){Name = "A2", Latitude = 49, Longitude = -71}
             };
+        markers.AddRange(_markers);
+        StateHasChanged();
     }
 
 
