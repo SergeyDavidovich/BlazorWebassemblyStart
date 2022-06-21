@@ -11,7 +11,10 @@
     </article>
     @*<nav id="mainNav">*@
     <SfSidebar ID="mainNav" HtmlAttributes="@SideBarHtmlAttribute" @bind-IsOpen="@SidebarOpen" Target=".main-content" Width="20%" @ref="Sidebar"
-               CloseOnDocumentClick="true" Animate="true" EnableGestures="true" ShowBackdrop="false" Type="SidebarType.Over">
+               CloseOnDocumentClick="true" Animate="true" EnableGestures="true" ShowBackdrop="false" Type="SidebarType.Over"
+    DockSize="72px" EnableDock=true
+    
+    >
         <ChildContent>
             <ul class="nav flex-column" style="margin-top:20px;">
                 <li class="nav-item px-3">
