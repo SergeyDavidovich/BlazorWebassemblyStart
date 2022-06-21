@@ -186,7 +186,7 @@
     SfSidebar Sidebar;
     public Orientation Orientation = Orientation.Horizontal;
     public Orientation VerOrientation = Orientation.Vertical;
-    public bool SidebarOpen { get; set; }
+    public bool SidebarOpen = false;
     private bool isSidebarOpen;
 
     Dictionary<string, object> HtmlAttribute = new Dictionary<string, object>()
@@ -196,15 +196,11 @@
 
     protected override void OnInitialized()
     {
-        SidebarOpen = false;
     }
 
     public void Toggle()
     {
-        if (SidebarOpen) isSidebarOpen = false;
-        else isSidebarOpen = true;
-        
-        SidebarOpen = isSidebarOpen;
+        SidebarOpen = !SidebarOpen;
     }
     #endregion
 }
