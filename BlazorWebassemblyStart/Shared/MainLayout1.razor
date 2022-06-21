@@ -1,7 +1,6 @@
 ﻿@inherits LayoutComponentBase
 @using Syncfusion.Blazor.Navigations
 
-@*<Animate Animation="Animations.Fade" DurationMs="300">*@
 <div id="menu" class="bg-primary">
     <div id="header">
         <ul class="header-list">
@@ -18,7 +17,6 @@
         </ul>
     </div>
 </div>
-@*</Animate>*@
 
 <div id="sidebar" class="bg-primary">
     <SfSidebar ID="side" HtmlAttributes="@HtmlAttribute" @bind-IsOpen="@SidebarOpen" Target=".main-content" Width="220px" @ref="Sidebar"
