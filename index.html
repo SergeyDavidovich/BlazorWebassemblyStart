@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=10.0, user-scalable=yes" />
     <title>BlazorWebassemblyStart</title>
     <base href="/BlazorWebassemblyStart/" />
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link id="bootstrap" href="css/bootstrap/bootstrap-solar.min.css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet" />
     <link href="BlazorWebassemblyStart.styles.css" rel="stylesheet" />
     <link href="manifest.json" rel="manifest" />
@@ -21,8 +21,8 @@
 </head>
 
 <body>
-    <div id="app">
-        <div class="container">
+    <div id="app" style="margin: 0 auto; width: 100vw; height: 100vh">
+        <div class="container" style="background-color:cornflowerblue; color:wheat">
             <div class="navbar-header">
                 <a class="navbar-brand">PWA</a>
             </div>
@@ -45,6 +45,19 @@
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
     <script>navigator.serviceWorker.register('service-worker.js');</script>
+
+    function SetDarkModeTheme(isDark) {
+    //document.getElementsByTagName('body')[0].style.display = 'none';
+
+    let bootstrap = document.getElementById('bootstrap');
+
+    //light_dark_mode.href = isDark ? 'css/app-dark.css' : 'css/app-light.css';
+
+    bootstrap.href = isDark ? 'css/bootstrap/bootstrap-solar.min.css' : 'css/bootstrap/bootstrap.min.css/';
+
+
+    //setTimeout(function () { document.getElementsByTagName('body')[0].style.display = 'block'; }, 200);
+    }
 </body>
 
 </html>
